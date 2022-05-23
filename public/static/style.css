@@ -73,6 +73,18 @@ input {
 
 .message h2 {
     font-size: 1.4rem;
+    word-break: break-all;
 }
 
-
+/* Create a responsive layout */
+@media (max-width: 950px) {
+    .container {
+        width: 90%;
+    }
+    form{
+        flex-direction: column;
+    }
+    #input-submit{
+        margin-top: 0.5rem;
+    }
+}
