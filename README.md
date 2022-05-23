@@ -2,9 +2,9 @@
 
 ![Using the link shortener to shorten a link](img/overview.gif)
 
-This is a link shortener that runs as a [Cloudflare Worker](https://workers.cloudflare.com/). It's the finished code for the [Build a Link Shortener with Cloudflare Workers tutorial on DEV.to](https://dev.to/mmascioni/build-a-link-shortener-with-cloudflare-workers-1j3i). To deploy it on your own Cloudflare account, follow these steps:
+This is a link shortener that runs as a [Cloudflare Worker](https://workers.cloudflare.com/). It's the finished code for the [Build a Link Shortener with Cloudflare Workers tutorial on DEV.to](https://dev.to/mmascioni/build-a-link-shortener-with-cloudflare-workers-1j3i) . To deploy it on your own Cloudflare account, follow these steps:
 
-1. Clone this repo: `git clone https://github.com/mm/cf-shortener.git`
+1. Clone this repo: `git clone https://github.com/uncle-jayden/cloudflare-url-shorter.git`
 
 2. Ensure Wrangler is installed on your local machine and authenticate with Cloudflare:
 
@@ -25,3 +25,7 @@ This is a link shortener that runs as a [Cloudflare Worker](https://workers.clou
     Copy the `id` you get in the terminal output to `wrangler.toml` in place of `ID_HERE`, and copy the `preview_id` you get in the terminal output in place of `PREVIEW_ID_HERE`.
 
 5. Deploy the Worker: `wrangler publish`
+
+# Different between original repo
+
+I just change some CSS and HTML to make a responsive layout for it. Also, I add something in the index.js to make sure the URL is vaild.
