@@ -36,7 +36,7 @@ router.post('/links', async request => {
       });
     }
     // Add slug to our KV store so it can be retrieved later:
-    await SHORTEN.put(slug, requestBody.url, { expirationTtl: 86400 });
+    await SHORTEN.put(slug, requestBody.url, { expirationTtl: 864000 });
     let shortenedURL = `${new URL(request.url).origin}/${slug}`;
     let responseBody = {
       message: 'Link shortened successfully',

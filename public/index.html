@@ -4,13 +4,14 @@
     <title>Shorten my URL</title>
     <script src="https://unpkg.com/vue@next"></script>
     <link rel="stylesheet" href="static/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   </head>
   <body>
     <div id="app">
       <div class="container">
         <h1>Shorten a URL</h1>
         <p>
-          Fill in the URL you want to shorten below. Links expire in 24 hours.
+          Fill in the URL you want to shorten below. Links expire in 10 days.
         </p>
         <form @submit.prevent="handleUrlSubmit">
           <input
@@ -78,5 +79,5 @@
       },
     });
     app.mount('#app');
-  </script>
+  </script>     
 </html>
