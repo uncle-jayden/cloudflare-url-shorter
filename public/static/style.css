@@ -61,7 +61,6 @@ input {
     line-height: 1.5;
     max-width: 80%;
     margin: auto;
-    overflow: hidden;
     border: 0.2rem solid #9AD6A7;
     border-radius: 0.25rem;
 }
