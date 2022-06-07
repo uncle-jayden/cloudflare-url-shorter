@@ -1,3 +1,14 @@
+# Different between original repo
+
+- Webpage now have a Responsive layout.
+- Add support for non-ASCII URL by automatic convert it into ASCII character only.
+- Automatic add "https://" at the beginning if the URL is invalid.
+
+# Feature may add in future
+
+- Allow user set expired time
+- Dark mode for webpage
+
 # ☁️ Link Shortener on Cloudflare Workers
 
 ![Using the link shortener to shorten a link](img/overview.gif)
@@ -25,7 +36,3 @@ This is a link shortener that runs as a [Cloudflare Worker](https://workers.clou
     Copy the `id` you get in the terminal output to `wrangler.toml` in place of `ID_HERE`, and copy the `preview_id` you get in the terminal output in place of `PREVIEW_ID_HERE`.
 
 5. Deploy the Worker: `wrangler publish`
-
-# Different between original repo
-
-I just change some CSS and HTML to make a responsive layout for it. Also, I add something in the index.js to make sure the URL is vaild.
