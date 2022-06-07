@@ -27,16 +27,16 @@ router.post('/links', async request => {
   let slug = nanoid();
   let requestBody = await request.json();
   if ('url' in requestBody) {
+    //Convert some special characters to ASCII. For example, convert 'https://中文.tw' to 'https://%E4%B8%AD%E6%96%87.tw'
+    let inputURL = encodeURI(requestBody.url);
     try{
-      testURL = new URL(requestBody.url);
+      new URL(inputURL);
     }
     catch{
-      return new Response('Invalid URL', {
-        status: 400,
-      });
-    }
+      inputURL = 'https://' + inputURL;
+    };
     // Add slug to our KV store so it can be retrieved later:
-    await SHORTEN.put(slug, requestBody.url, { expirationTtl: 864000 });
+    await SHORTEN.put(slug, inputURL, { expirationTtl: 864000 });
     let shortenedURL = `${new URL(request.url).origin}/${slug}`;
     let responseBody = {
       message: 'Link shortened successfully',
