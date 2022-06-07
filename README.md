@@ -8,6 +8,10 @@
 
 - Allow user set expired time
 - Dark mode for webpage
+- Force https  (Optional)
+- Block robot index (Optional)
+- Allow user delete their link
+- Return a 404 webpage instead of "Key not found"
 
 # ☁️ Link Shortener on Cloudflare Workers
 
